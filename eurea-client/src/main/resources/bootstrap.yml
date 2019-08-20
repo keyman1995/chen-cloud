@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: eureka-client2
+  cloud:
+    config:
+      name: eureka-client2
+      discovery:
+        service-id: config-server
+        enabled: true
+  #      uri: http://localhost:8089/
+  profiles:
+    active: dev
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+    enabled: true

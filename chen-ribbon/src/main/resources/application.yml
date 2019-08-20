@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-clound-ribbon-consumer
+server:
+  port: 9001
+eureka:
+  client:
+    enabled: false
+
+helloclient:
+  ribbon:
+    listOfServers: localhost:8080,localhost:8088
